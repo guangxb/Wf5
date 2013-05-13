@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sys.Workflow", "Sys.Workflow\Sys.Workflow.csproj", "{F2AA5CC3-4212-4C6C-9336-A5C10F46AFFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sys.WorkflowApi", "Sys.WorkflowApi\Sys.WorkflowApi.csproj", "{0E393FDB-A3CB-4798-9764-9D94046D3A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sys.WorkflowTest", "Sys.WorkflowTest\Sys.WorkflowTest.csproj", "{A7ACDEF2-D91C-46FD-8A14-D5A9D5CFDB03}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.0.133:8080/tfs/de
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sys.Workflow\\Sys.Workflow.csproj
+		SccProjectName1 = Sys.Workflow
+		SccLocalPath1 = Sys.Workflow
+		SccProjectUniqueName2 = Sys.WorkflowApi\\Sys.WorkflowApi.csproj
+		SccProjectName2 = Sys.WorkflowApi
+		SccLocalPath2 = Sys.WorkflowApi
+		SccProjectUniqueName3 = Sys.WorkflowTest\\Sys.WorkflowTest.csproj
+		SccProjectName3 = Sys.WorkflowTest
+		SccLocalPath3 = Sys.WorkflowTest
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2AA5CC3-4212-4C6C-9336-A5C10F46AFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2AA5CC3-4212-4C6C-9336-A5C10F46AFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2AA5CC3-4212-4C6C-9336-A5C10F46AFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2AA5CC3-4212-4C6C-9336-A5C10F46AFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E393FDB-A3CB-4798-9764-9D94046D3A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E393FDB-A3CB-4798-9764-9D94046D3A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E393FDB-A3CB-4798-9764-9D94046D3A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E393FDB-A3CB-4798-9764-9D94046D3A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7ACDEF2-D91C-46FD-8A14-D5A9D5CFDB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7ACDEF2-D91C-46FD-8A14-D5A9D5CFDB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7ACDEF2-D91C-46FD-8A14-D5A9D5CFDB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7ACDEF2-D91C-46FD-8A14-D5A9D5CFDB03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

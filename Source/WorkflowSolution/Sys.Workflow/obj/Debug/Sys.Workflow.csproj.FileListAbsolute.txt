@@ -1,0 +1,7 @@
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\bin\Debug\Sys.Workflow.dll.config
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\bin\Debug\Sys.Workflow.dll
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\bin\Debug\Sys.Workflow.pdb
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\obj\Debug\Sys.Workflow.csprojResolveAssemblyReference.cache
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\obj\Debug\Sys.Workflow.dll
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\obj\Debug\Sys.Workflow.pdb
+D:\DRWorkflow\Source\WorkflowSolution\Sys.Workflow\bin\Debug\ServiceStack.Text.dll

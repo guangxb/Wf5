@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2AA5CC3-4212-4C6C-9336-A5C10F46AFFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Workflow</RootNamespace>
+    <AssemblyName>Sys.Workflow</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\DLL\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Entity\ActivityInstanceEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Entity\LogEntity.cs" />
+    <Compile Include="Business\Entity\LogQueryEntity.cs" />
+    <Compile Include="Business\Entity\MessageEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Entity\ProcessInstanceEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Entity\QueryBase.cs" />
+    <Compile Include="Business\Entity\RoleEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Entity\TaskQueryEntity.cs" />
+    <Compile Include="Business\Manager\LogManager.cs" />
+    <Compile Include="Business\Service\WorkflowServiceP1.cs" />
+    <Compile Include="Common\LogEnum.cs" />
+    <Compile Include="Common\NodeView.cs" />
+    <Compile Include="Common\TaskStateEnum.cs" />
+    <Compile Include="Common\TransitionDirectionTypeEnum.cs" />
+    <Compile Include="Common\TransitionTypeEnum.cs" />
+    <Compile Include="Common\WfDefine.cs" />
+    <Compile Include="DataModel\DataAccessFactory.cs" />
+    <Compile Include="Engine\BackwardContext.cs" />
+    <Compile Include="Engine\RuntimeManagerType.cs" />
+    <Compile Include="Business\Entity\TaskEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Entity\TaskViewEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Entity\TransitionInstanceEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Service\IWorkflowService.cs" />
+    <Compile Include="Business\Manager\ActivityException.cs" />
+    <Compile Include="Business\Manager\ActivityInstanceManager.cs" />
+    <Compile Include="Business\Manager\ProcessException.cs" />
+    <Compile Include="Business\Manager\ProcessInstanceManager.cs" />
+    <Compile Include="Business\Service\WorkflowException.cs" />
+    <Compile Include="Business\Service\WorkflowService.cs" />
+    <Compile Include="Business\Xpdl\ProcessModel.cs" />
+    <Compile Include="Business\Manager\RoleManager.cs" />
+    <Compile Include="Business\Manager\TaskManager.cs" />
+    <Compile Include="Business\Manager\TransitionInstanceManager.cs" />
+    <Compile Include="Business\Xpdl\ActivityEntity.cs" />
+    <Compile Include="Business\Xpdl\ActivityResource.cs" />
+    <Compile Include="Business\Xpdl\ConditionEntity.cs" />
+    <Compile Include="Business\Xpdl\ExpressionParser.cs" />
+    <Compile Include="Business\Xpdl\GroupBehaviourEntity.cs" />
+    <Compile Include="Business\Xpdl\NextActivityComponent.cs" />
+    <Compile Include="Business\Xpdl\NextActivityComponentFactory.cs" />
+    <Compile Include="Business\Xpdl\NextActivityGateway.cs" />
+    <Compile Include="Business\Xpdl\NextActivityItem.cs" />
+    <Compile Include="Business\Xpdl\NextActivityMatchedResult.cs" />
+    <Compile Include="Business\Xpdl\NextActivityMatchedType.cs" />
+    <Compile Include="Business\Xpdl\NextActivityRouteChoiceEnum.cs" />
+    <Compile Include="Business\Xpdl\NextActivityRouteResult.cs" />
+    <Compile Include="Business\Xpdl\NextActivityRouteResultHelper.cs" />
+    <Compile Include="Business\Xpdl\NextActivityScheduleBase.cs" />
+    <Compile Include="Business\Xpdl\NextActivityScheduleFactory.cs" />
+    <Compile Include="Business\Xpdl\NextActivityScheduleJoin.cs" />
+    <Compile Include="Business\Xpdl\NextActivityScheduleSplit.cs" />
+    <Compile Include="Business\Xpdl\ProcessEntity.cs" />
+    <Compile Include="Business\Manager\ProcessManager.cs" />
+    <Compile Include="Business\Xpdl\TaskImplementDetail.cs" />
+    <Compile Include="Business\Xpdl\TransitionEntity.cs" />
+    <Compile Include="Business\Xpdl\TransitionPriorityCompare.cs" />
+    <Compile Include="Business\Xpdl\XPDLDefinition.cs" />
+    <Compile Include="Common\CommentTypeEnum.cs" />
+    <Compile Include="Common\ConditionParseResultEnum.cs" />
+    <Compile Include="Common\ConditionTypeEnum.cs" />
+    <Compile Include="Common\GatewayDirectionEnum.cs" />
+    <Compile Include="Common\GatewaySplitJoinTypeEnum.cs" />
+    <Compile Include="Common\ImplementationTypeEnum.cs" />
+    <Compile Include="Common\NodeStateEnum.cs" />
+    <Compile Include="Common\NodeTypeEnum.cs" />
+    <Compile Include="Common\ParallelOptionEnum.cs" />
+    <Compile Include="Common\Performer.cs" />
+    <Compile Include="Common\ProcessStateEnum.cs" />
+    <Compile Include="Common\TaskTypeEnum.cs" />
+    <Compile Include="Common\WfLogonUser.cs" />
+    <Compile Include="Common\XmlDefinitionException.cs" />
+    <Compile Include="DataModel\DynamicBuilder.cs" />
+    <Compile Include="DataModel\DataAccessManager.cs" />
+    <Compile Include="DataModel\Session.cs" />
+    <Compile Include="DataModel\SqlCached.cs" />
+    <Compile Include="DataModel\SQL\EnitityMapper.cs" />
+    <Compile Include="DataModel\SQL\MapExtension.cs" />
+    <Compile Include="DataModel\SQL\SQLGenerator.cs" />
+    <Compile Include="Define.cs" />
+    <Compile Include="Engine\DLRuntimeInteroperationException.cs" />
+    <Compile Include="Engine\Event\WfEventArgs.cs" />
+    <Compile Include="Engine\Pattern\AndJoinNode.cs" />
+    <Compile Include="Engine\Pattern\AndSplitNode.cs" />
+    <Compile Include="Engine\Pattern\ComplexJoinNode.cs" />
+    <Compile Include="Engine\Pattern\ComplexSplitNode.cs" />
+    <Compile Include="Engine\Pattern\EndNode.cs" />
+    <Compile Include="Engine\Pattern\EventNode.cs" />
+    <Compile Include="Engine\Pattern\GatewayExecutedResult.cs" />
+    <Compile Include="Engine\Pattern\GatewayExecutedStatus.cs" />
+    <Compile Include="Engine\Pattern\GatewayNodeFactory.cs" />
+    <Compile Include="Engine\Pattern\ICompleteAutomaticlly.cs" />
+    <Compile Include="Engine\Pattern\IDynamicRunable.cs" />
+    <Compile Include="Engine\Pattern\NodeBase.cs" />
+    <Compile Include="Engine\Pattern\NodeMediator.cs" />
+    <Compile Include="Engine\Pattern\NodeMediatorAutomantic.cs" />
+    <Compile Include="Engine\Pattern\NodeMediatorFactory.cs" />
+    <Compile Include="Engine\Pattern\NodeMediatorManual.cs" />
+    <Compile Include="Engine\Pattern\NodeMediatorStart.cs" />
+    <Compile Include="Engine\Pattern\OrJoinNode.cs" />
+    <Compile Include="Engine\Pattern\OrSplitNode.cs" />
+    <Compile Include="Engine\Pattern\PluginNode.cs" />
+    <Compile Include="Engine\Pattern\ScriptNode.cs" />
+    <Compile Include="Engine\Pattern\StartNode.cs" />
+    <Compile Include="Engine\Pattern\TaskNode.cs" />
+    <Compile Include="Engine\Pattern\WorkItem.cs" />
+    <Compile Include="Engine\Pattern\WorkItemNodeFactory.cs" />
+    <Compile Include="Engine\Pattern\XOrJoinNode.cs" />
+    <Compile Include="Engine\Pattern\XOrSplitNode.cs" />
+    <Compile Include="Engine\PersistenceException.cs" />
+    <Compile Include="Engine\PersistenceManager.cs" />
+    <Compile Include="Engine\Rule\DroolsRuleManager.cs" />
+    <Compile Include="Engine\ActivityForwardContext.cs" />
+    <Compile Include="Common\WfRunner.cs" />
+    <Compile Include="Engine\WfRuntimeException.cs" />
+    <Compile Include="Engine\WfRuntimeManager.cs" />
+    <Compile Include="Engine\WfRuntimeManagerAppRunning.cs" />
+    <Compile Include="Engine\WfRuntimeManagerReject.cs" />
+    <Compile Include="Engine\WfRuntimeManagerReverse.cs" />
+    <Compile Include="Engine\WfRuntimeManagerStartup.cs" />
+    <Compile Include="Engine\WfRuntimeManagerTaskRunning.cs" />
+    <Compile Include="Engine\WfRuntimeManagerWithdraw.cs" />
+    <Compile Include="Engine\WfTaskImplementException.cs" />
+    <Compile Include="Engine\WfExecutedResult.cs" />
+    <Compile Include="Engine\WfExecutedStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\CacheInfoHelper.cs" />
+    <Compile Include="Utility\ConfigHelper.cs" />
+    <Compile Include="Utility\DataBaseHelper.cs" />
+    <Compile Include="Utility\DynamicExpression.cs" />
+    <Compile Include="Utility\ReflectionHelper.cs" />
+    <Compile Include="Utility\SerializationHelper.cs" />
+    <Compile Include="Utility\XmlHelper.cs" />
+    <Compile Include="Utility\XpdlCachedHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Xsd\ProcessSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Xml\process_automatictask.xml" />
+    <Content Include="Xml\process_vacation.xml" />
+    <Content Include="Xml\process_vacation_Branch.xml" />
+    <Content Include="Xml\ProductPriceModify.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

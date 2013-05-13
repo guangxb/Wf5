@@ -1,0 +1,9 @@
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\bin\Debug\Sys.WorkflowTest.dll
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\bin\Debug\Sys.WorkflowTest.pdb
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\bin\Debug\Sys.Workflow.dll
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\bin\Debug\Sys.Workflow.pdb
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\obj\Debug\Sys.WorkflowTest.csprojResolveAssemblyReference.cache
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\obj\Debug\Sys.WorkflowTest.dll
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\obj\Debug\Sys.WorkflowTest.pdb
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\bin\Debug\Sys.WorkflowTest.dll.config
+D:\DRWorkflow\Source\WorkflowSolution\Sys.WorkflowTest\bin\Debug\ServiceStack.Text.dll

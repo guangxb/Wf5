@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package>
+  <Participants>
+      <Participant type="ROLE" id="3c917748-6752-4bc6-aea8-b85d40521888" name="Role_HR_Manager" outerId="102"/>
+  </Participants>
+  <WorkflowProcess>
+        <Process name="员工加班调休" id="7E960D99-6B05-4FEC-9198-F90471307DBE">
+          <Description>员工调休流程描述</Description>
+	        <Activities>
+	          <Activity name="开始" id="7E960D99-6B05-4FEC-9198-F90471307DBE">
+			        <ActivityType type="StartNode"/>
+		        </Activity>
+		        <Activity name="结束" id="4d2b4913-69ee-41b2-b42d-3d3baf03ffdd">
+			        <ActivityType type="EndNode"/>
+		        </Activity>
+		        <Activity name="申请调休" id="5e7dd6cb-395a-4192-9fc5-e9ce97c460e0">
+			        <ActivityType type="TaskNode"/>
+              <Implement type="Auto"/>
+		        </Activity>
+		        <Activity name="Or分支节点" id="089f1d4f-01ff-422b-b0dd-28a280eb498e">
+              <ActivityType type="GatewayNode" gatewayDirection="OrSplit"/>
+		        </Activity>
+		        <Activity name="行政处理" id="8f6cb638-52b5-4eb2-b435-00dd24f55c97">
+              <ActivityType type="TaskNode"/>
+              <Impement type="Manual"/>
+              <Performers>
+                <Performer id="3c917748-6752-4bc6-aea8-b85d40521888"/>
+                <Performer id="8e54c07d-d424-4186-b86c-cec43019bed0"/>
+              </Performers>
+		        </Activity>
+		        <Activity name="中心总监审阅" id="89161725-b22c-4c2e-b6ea-eac5e0577d5a">
+              <ActivityType type="TaskNode"/>
+		        </Activity>
+            <Activity name="Or 合并节点" id="c0ee3523-a4ea-4d46-be97-7c6f57a0166b">
+              <ActivityType type="GatewayNode" gatewayDirection="OrJoin"/>
+            </Activity>
+		        <Activity name="总经理审批" id="c9b9416f-1581-41d1-92fc-4e6be14085d0">
+              <ActivityType type="TaskNode"/>
+		        </Activity>
+	        </Activities>
+	        <Transitions>
+		        <Transition name="T1" id="a5bd5c1c-f6b2-4091-9235-36c8f193f1a0" from="7E960D99-6B05-4FEC-9198-F90471307DBE" to="5e7dd6cb-395a-4192-9fc5-e9ce97c460e0" >
+              <Description/>
+              <Condition/>
+		        </Transition>
+            <Transition name="T11" id="50915787-7714-4C4F-9C87-3289452AFA45" from="7E960D99-6B05-4FEC-9198-F90471307DBE" to="089f1d4f-01ff-422b-b0dd-28a280eb498e">
+              <Description/>
+              <Condition/>
+            </Transition>
+		        <Transition name="T2" id="1ad6e341-3fb4-4860-80d2-011336f07a5c" from="5e7dd6cb-395a-4192-9fc5-e9ce97c460e0" to="089f1d4f-01ff-422b-b0dd-28a280eb498e">
+              <Description/>
+              <Condition/>
+		        </Transition>
+		        <Transition name="T3" id="c22d96b6-534b-40b4-8258-f2b5faf8fe30" from="089f1d4f-01ff-422b-b0dd-28a280eb498e" to="8f6cb638-52b5-4eb2-b435-00dd24f55c97">
+              <Description/>
+              <Condition type="Expression">
+                <ConditionText>
+                  <![CDATA[ 
+                  askDays < 5 and leaveType != "shijia"
+                  ]]>
+                </ConditionText>
+              </Condition>
+            </Transition>
+		        <Transition name="T4" id="9d565899-4e63-4400-90bb-b345543175d3" from="089f1d4f-01ff-422b-b0dd-28a280eb498e" to="89161725-b22c-4c2e-b6ea-eac5e0577d5a">
+              <Description/>
+              <Condition type="Rule">
+                <ConditionText>
+                  <![CDATA[
+                  askDays >= 5 or leaveType == "shijia"
+                  ]]>
+                </ConditionText>
+              </Condition>
+		        </Transition>
+		        <Transition name="T5" id="21fe5ace-4700-49c9-b081-bd7cf8353e68" from="89161725-b22c-4c2e-b6ea-eac5e0577d5a" to="c0ee3523-a4ea-4d46-be97-7c6f57a0166b">
+              <Description/>
+              <Condition/>
+		        </Transition>
+		        <Transition name="T6" id="dcf0ce07-4dcc-404f-85af-ba3235cd05f9" from="8f6cb638-52b5-4eb2-b435-00dd24f55c97" to="c0ee3523-a4ea-4d46-be97-7c6f57a0166b">
+              <Description/>
+              <Condition/>
+		        </Transition>
+		        <Transition name="T7" id="00200106-7510-11d9-86f2-000476a22f44" from="c0ee3523-a4ea-4d46-be97-7c6f57a0166b" to="c9b9416f-1581-41d1-92fc-4e6be14085d0">
+              <Description/>
+              <Condition/>
+		        </Transition>
+		        <Transition name="T8" id="a1dd27af-b362-4450-a325-c9c338bfa64d" from="c9b9416f-1581-41d1-92fc-4e6be14085d0" to="4d2b4913-69ee-41b2-b42d-3d3baf03ffdd">
+			        <Description/>
+              <Condition/>
+		        </Transition>
+	        </Transitions>
+        </Process>
+  </WorkflowProcess>
+</Package>
